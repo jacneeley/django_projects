@@ -1,0 +1,15 @@
+<style>
+    div{
+        margin: 0 auto;
+    }
+</style>
+
+<div>
+    <h1> Question: {{ question.question_text }}</h1>
+    <h2>Choices:</h2>
+    <ul>
+        {% for choice in question.choice_set.all %}
+            <ul>{{ choice.choice_text }}</ul>
+        {% endfor %}
+    </ul>
+</div>
